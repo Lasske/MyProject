@@ -10,3 +10,4 @@ from .phone_type import PhoneType
 from .tire_size import TireSize
 from .user_type import UserType
 from .wheel_formula import WheelFormula
+
