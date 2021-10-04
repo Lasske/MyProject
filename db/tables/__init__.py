@@ -1,5 +1,5 @@
 from .car_body import CarBody
-from .dealer import Dealer
+from .user import User
 from .model import Model
 from .modification import Modification
 from .order import Order

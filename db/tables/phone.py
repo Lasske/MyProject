@@ -14,6 +14,6 @@ class Phone(Base):
     )
     dealer_login = Column(
         String(50),
-        ForeignKey("dealers.login", onupdate="CASCADE", ondelete="CASCADE"),
+        ForeignKey("users.login", onupdate="CASCADE", ondelete="CASCADE"),
         nullable=False
     )
