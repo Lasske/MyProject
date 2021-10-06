@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, Integer, ForeignKey
+from sqlalchemy.orm import relationship
 
 from ..base import Base
 
@@ -12,8 +13,11 @@ class Phone(Base):
         ForeignKey("phones_types.id", onupdate="CASCADE", ondelete="CASCADE"),
         nullable=False
     )
-    dealer_login = Column(
+    user_login = Column(
         String(50),
         ForeignKey("users.login", onupdate="CASCADE", ondelete="CASCADE"),
         nullable=False
     )
+
+    phone_type = relationship("PhoneType")
+    user = relationship("User")

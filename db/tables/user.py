@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy.orm import relationship
 
 from ..base import Base
 
@@ -13,3 +14,5 @@ class User(Base):
         ForeignKey("users_types.id", onupdate="CASCADE", ondelete="CASCADE"),
         nullable=False
     )
+
+    user_type = relationship("UserType")
