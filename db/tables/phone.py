@@ -21,3 +21,4 @@ class Phone(Base):
 
     phone_type = relationship("PhoneType")
     user = relationship("User")
+
